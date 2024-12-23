@@ -11,6 +11,35 @@ This is the starting codebase that will be used in the FREE AWS Cloud Project Bo
 
 ## Instructions
 
+show the env var
+env | grep AWS
+once the file has been created if the above doesnt work use the below set permissions
+chmod +x /workspace/aws.env
+enable it to be sourced directly for the correct file: source /workspace/aws.env 
+
+created a new file-where in root called aws env
+used ""
+
+export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_DEFAULT_REGION=us-west-2
+
+
+At the start of the bootcamp you need to create a new Github Repository from this template.
+set the env vars
+
+
+Budget
+Budget: get the id instead of variable
+PROGRAMTICALLY exported id into the filr
+export adds info.
+export ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+
+aws budgets create-budget \
+    --account-id $ACCOUNT_ID \
+    --budget file://aws/json/budget.json \
+    --notifications-with-subscribers file://aws/json/notifications-with-subscribers.json \
+
 At the start of the bootcamp you need to create a new Github Repository from this template.
 
 ## Journaling Homework
