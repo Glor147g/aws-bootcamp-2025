@@ -19,7 +19,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 
 # Verify installation
-/usr/local/bin/aws --version
+
 which aws
 aws --version
 
@@ -30,16 +30,18 @@ once the file has been created if the above doesnt work use the below set permis
 chmod +x /workspace/aws.env
 enable it to be sourced directly for the correct file: source /workspace/aws.env 
 
-created a new file-where in root called aws env
-used ""
+I can load environment variable - ensure grep is working
 
-export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
-export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-export AWS_DEFAULT_REGION=us-west-2
+export AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
+export AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+export AWS_DEFAULT_REGION="us-west-2"
 
+I can persist the above environment variables so that gp remembers them, and is ready for us 
+gp env 
 
-At the start of the bootcamp you need to create a new Github Repository from this template.
-set the env vars
+I can ensure the aws cli runs automatically by adding it on gitpod yaml 
+
+I can programmatically add the budget
 
 
 Budget
