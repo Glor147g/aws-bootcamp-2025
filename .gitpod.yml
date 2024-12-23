@@ -12,5 +12,5 @@ tasks:
       cd $THEIA_WORKSPACE_ROOT
 vscode:
   extensions:
-    # - 42Crunch.vscode-openapi
-    - amazonwebservices.aws-toolkit-vscode
+    - 42Crunch.vscode-openapi
+    # - amazonwebservices.aws-toolkit-vscode
