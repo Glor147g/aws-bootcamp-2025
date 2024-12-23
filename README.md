@@ -10,6 +10,19 @@ This is the starting codebase that will be used in the FREE AWS Cloud Project Bo
 ![Cruddur Screenshot](_docs/assets/cruddur-screenshot.png)
 
 ## Instructions
+# Remove existing files
+rm -rf aws awscliv2.zip
+
+# Download and install fresh
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# Verify installation
+/usr/local/bin/aws --version
+which aws
+aws --version
+
 
 show the env var
 env | grep AWS
